@@ -26,9 +26,10 @@
   },
   "homepage": "https://github.com/jammymalina/aws-dynamodb-document-client-mock#readme",
   "dependencies": {
+    "@types/node": "^12.12.8",
     "@types/sinon": "^7.5.0",
-    "sinon": "^7.5.0",
-    "aws-sdk": "^2.573.0"
+    "aws-sdk": "^2.573.0",
+    "sinon": "^7.5.0"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^0.1.3",
