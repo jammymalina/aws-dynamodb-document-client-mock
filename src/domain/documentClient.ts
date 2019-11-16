@@ -9,14 +9,13 @@ import {
   TransactWriteCallback,
   UpdateCallback,
 } from "./callback";
-
-export type CreateSetList = number[] | string[] | AWS.DynamoDB.DocumentClient.binaryType[];
+import { DynamoDBSet } from "./dynamoDBTypes";
 
 export interface DocumentClient {
   batchGet(params: AWS.DynamoDB.DocumentClient.BatchGetItemInput, callback: BatchGetCallback): void;
   batchWrite(params: AWS.DynamoDB.DocumentClient.BatchWriteItemInput, callback: BatchWriteCallback): void;
   createSet(
-    list: CreateSetList,
+    list: DynamoDBSet,
     options?: AWS.DynamoDB.DocumentClient.CreateSetOptions
   ): AWS.DynamoDB.DocumentClient.DynamoDbSet;
   delete(params: AWS.DynamoDB.DocumentClient.DeleteItemInput, callback: DeleteCallback): void;

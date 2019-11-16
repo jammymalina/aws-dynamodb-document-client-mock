@@ -4,8 +4,10 @@
   "description": "AWS DynamoDB DocumentClient mocking utility",
   "main": "dist/index.js",
   "scripts": {
-    "test": "mocha -r ts-node/register test/unit/**/*.ts",
-    "coverage": "nyc npm run test",
+    "test": "npm run test:unit && npm run test:component",
+    "test:unit": "mocha -r ts-node/register test/unit/**/*.ts",
+    "test:component": "mocha -r ts-node/register test/unit/**/*.ts",
+    "coverage": "nyc npm run test:unit",
     "lint": "eslint './{src,test}/**/*.ts'"
   },
   "repository": {
